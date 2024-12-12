@@ -2,13 +2,5 @@ workflows:
   ios:
     name: Build iOS App
     max_build_duration: 120
-    platform: ios
-    build:
-      xcode_project: ios/ChipNPin.xcodeproj  # Replace with your project file if needed
-      scheme: ChipNPin                      # Replace with your scheme name
-      cocoapods: true
-                      # Optional, if using a specific UUID
-    test:
-      enabled: true
     artifacts:
-      - build/ios/ChipNPin.ipa  # Adjust the output path to match your project
+      - build/ios/ChipNPin.ipa
