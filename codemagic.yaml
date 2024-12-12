@@ -17,6 +17,6 @@ workflows:
             path: "path/to/profile.mobileprovision" # Optional, if you're using custom profiles
             uuid: "$PROFILE_UUID"                   # Optional, if using a specific UUID
     test:
-      enabled: false
+      enabled: true
     artifacts:
       - build/ios/ChipNPin.ipa  # Adjust the output path to match your project
