@@ -3,19 +3,17 @@ workflows:
     name: Build iOS App
     max_build_duration: 120
     platform: ios
-    ios:
-      build: true
+    build:
       xcode_project: ios/ChipNPin.xcodeproj  # Replace with your project file if needed
       scheme: ChipNPin                      # Replace with your scheme name
       cocoapods: true
       code_signing:
-        ios:
-          distribution_certificate:
-            file: "path/to/distribution.cer"       # Optional, if you're using custom certificates
-            password: "$CERT_PASSWORD"             # Optional, if using password
-          provisioning_profile:
-            path: "path/to/profile.mobileprovision" # Optional, if you're using custom profiles
-            uuid: "$PROFILE_UUID"                   # Optional, if using a specific UUID
+        distribution_certificate:
+          file: "path/to/distribution.cer"       # Optional, if you're using custom certificates
+          password: "$CERT_PASSWORD"             # Optional, if using password
+        provisioning_profile:
+          path: "path/to/profile.mobileprovision" # Optional, if you're using custom profiles
+          uuid: "$PROFILE_UUID"                   # Optional, if using a specific UUID
     test:
       enabled: true
     artifacts:
